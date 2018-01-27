@@ -1,15 +1,14 @@
 language: python
 python:
-    - "3.6"
+- '3.6'
 cache: pip
 install:
-    - pip install pipenv --upgrade
-    - pipenv install --dev
+- pip install pipenv --upgrade
+- pipenv install --dev
 script:
-    - py.test -m "not ui" --cov-config .covconfig
+- py.test -m "not ui" --cov-config .covconfig
 deploy:
-    provider: heroku
-    api_key:
-        secure: LQ+7dhaemsqlnS4lw78XwXqAMiGD7WuRC27Kbbe0DqPx/BeAJyhRmAp3U5KXqQyjhk4wFcbD7NkzUVkv7Ly8Hq3wY7YS0DyOx2RWff9Bz5dh+sW9NeckfjXKI/lXCRArp9R7Sivl7iJD1zlVS55RstwhJsdel1xxcsGidhtfi3EwvQd8pr4aoSB9MZXTCxVgwB34bYXixD8pszfahfigw2wiytbUznV9Hwh0WX8dHH6vtinOn83bYb/mgBFK7oF3XQ9maugq93VlU9STP7bDWQJv+03iZJ1wfWeF8jMyTmcYR1fI+5JAJT/D7MBrVnNljcVbFVsGxwEO5rMyz69q0cCDmFWJuGDZVf2WTqSkccrUO5tPdg3G3Sw/mcnnpNqAag+GH9wbCe+lVZocBax5LKIxXOgLYqsibvKLmyMQfskBlsdWgCZbLiBvtkZA5InDZQik7zYHugTXySAELrlC9GWhEeOuH5OAnSE+hF5sLfNMAAGbkWDh+jnQdaXAyw2+sMIW2RnpYBWTiSz+5SHzeN2jGLVvHO2d6GvyNZDkouu4dh8fjLVrFhd+oGXIsk28sFhls4yGxOcSV0Uybpnz2cbuPMvfEWhkYy396nJkoakQwpRV/fwDQc5Z1QuAD2nLEscJcPB9331L+IWXUB78B81aPQd5G4vgEXDHBpnOl6I=
-after_success:
-    coveralls
+  provider: heroku
+  api_key:
+    secure: hxJQNvICpkLF7jkM0q9MRz0H+y3qwIB6aTCV5jhbiwmGFyQb+vMeAL97aiZLXRvgN8v8gdSbgGjw0SLC1/tarRA2NArEvr5mm+LFD7C+I6s1txU10g7HpsSfWmkdDZDb1DFyUqJhxBx7HI81GoteNtQj1+iXAO79u1DtaP3lLbJTDAsH0O8SkJqMwvJwEfxxQwE3k9EV1EV/j9O3gwLe2oJ5MMYUPx5omGkmivu95Z55/u7TCiNh4/XpgBxuNdlnMv9wRaxQIqtE1jktmDA4LLXJ5G+C/3u7xCxigMB3yD/ZFhbyhlYKcCcZVUFo64F0ngDLkIR44U6sCnHPQM8vpuROIjFOEIYkwVFhgr8xh2lBDYdyZ04VQR2fVM5cEdU5t1ChPRFEQV+LSQ2GmgDdWJnv3HR7RMAeCexhtdO53s+21+Jha/kU39s5l9Wd6UOvYtZP19qmb5XQktaZ+nWarmtV6JMxiG64CpeLVzjpiQnaoiLJJHigtsJodEa0JCRqv9En0pY3UkRwpIOPc+CpgKjM/SoKd5AFiXi3Y9V40Jg0qtgQNGhfFxIDSGF384lpXZbA0DKnhDjolckLoP3WxW9KDDSWLCkz9kL9P5le2Or3ByYYzswICFj4OQBJ1yli3qnA5MdUNAyBFJN3B177pLgDZTHN2alC1IGFy5O6jRY=
+after_success: coveralls
