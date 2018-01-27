@@ -24,6 +24,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 ALLOWED_HOSTS = []
 
 LOCAL_APPS = [
+    "shoptimize.apps.groceries",
 ]
 
 THIRD_PARTY_APPS = [
