@@ -1,4 +1,4 @@
-from shoptimze.settings.base import *
+from shoptimize.settings.base import *
 
 DEBUG = False
 
