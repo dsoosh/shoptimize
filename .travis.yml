@@ -1,0 +1,15 @@
+language: python
+python:
+    - "3.6"
+cache: pip
+install:
+    - pip install pipenv --upgrade
+    - pipenv install --dev
+script:
+    - py.test -m "not ui" --cov-config .covconfig
+deploy:
+    provider: heroku
+    api_key:
+        secure: LQ+7dhaemsqlnS4lw78XwXqAMiGD7WuRC27Kbbe0DqPx/BeAJyhRmAp3U5KXqQyjhk4wFcbD7NkzUVkv7Ly8Hq3wY7YS0DyOx2RWff9Bz5dh+sW9NeckfjXKI/lXCRArp9R7Sivl7iJD1zlVS55RstwhJsdel1xxcsGidhtfi3EwvQd8pr4aoSB9MZXTCxVgwB34bYXixD8pszfahfigw2wiytbUznV9Hwh0WX8dHH6vtinOn83bYb/mgBFK7oF3XQ9maugq93VlU9STP7bDWQJv+03iZJ1wfWeF8jMyTmcYR1fI+5JAJT/D7MBrVnNljcVbFVsGxwEO5rMyz69q0cCDmFWJuGDZVf2WTqSkccrUO5tPdg3G3Sw/mcnnpNqAag+GH9wbCe+lVZocBax5LKIxXOgLYqsibvKLmyMQfskBlsdWgCZbLiBvtkZA5InDZQik7zYHugTXySAELrlC9GWhEeOuH5OAnSE+hF5sLfNMAAGbkWDh+jnQdaXAyw2+sMIW2RnpYBWTiSz+5SHzeN2jGLVvHO2d6GvyNZDkouu4dh8fjLVrFhd+oGXIsk28sFhls4yGxOcSV0Uybpnz2cbuPMvfEWhkYy396nJkoakQwpRV/fwDQc5Z1QuAD2nLEscJcPB9331L+IWXUB78B81aPQd5G4vgEXDHBpnOl6I=
+after_success:
+    coveralls
