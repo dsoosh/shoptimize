@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
+from . import models
+
 
 def discounts(request):
-    return render(request, "discounts.html")
-
+    discounts = models.GroceryDiscount.objects.all()
+    return render(request, template_name='discounts.html', context={'discounts': discounts})
