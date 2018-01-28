@@ -1,8 +1,13 @@
+import datetime
 import pytest
 from django.urls import reverse
 
 from .. import models
 from .fixtures import item, store
+
+today = datetime.datetime.today()
+one_day = datetime.timedelta(days=1)
+yesterday = today - one_day
 
 
 @pytest.mark.django_db
