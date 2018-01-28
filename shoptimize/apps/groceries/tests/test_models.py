@@ -1,6 +1,6 @@
 import pytest
 
-from . import models
+from shoptimize.apps.groceries import models
 
 
 @pytest.mark.django_db
