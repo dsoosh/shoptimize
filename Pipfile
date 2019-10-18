@@ -16,7 +16,7 @@ pytest-django = "*"
 
 [packages]
 
-django = "==2.0"
+django = "==2.0.12"
 pytest-django = "*"
 whitenoise = "*"
 dj-database-url = "*"
